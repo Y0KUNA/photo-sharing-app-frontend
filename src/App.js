@@ -33,8 +33,11 @@ const App = (props) => {
       }
       // Xóa thông tin người dùng sau khi logout
     } catch (error) {
+      setUser(null);
       console.error("Logout failed:", error);
+      navigate("/");
     }
+    navigate("/");
   };
 
   return (

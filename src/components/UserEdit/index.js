@@ -12,15 +12,15 @@ export default function UserEdit() {
     fetch(`https://f4gvcl-8080.csb.app/api/user/${userId}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log("Fetched user data:", data);
         setUser(data);
-        console.log(user);
         setValue("first_name", data.first_name);
         setValue("last_name", data.last_name);
         setValue("location", data.location);
         setValue("occupation", data.occupation);
         setValue("description", data.description);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error("Fetch error:", err));
   }, [userId, setValue]);
 
   const onSubmit = async (data) => {
@@ -50,6 +50,7 @@ export default function UserEdit() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} style={{ padding: 20 }}>
       <h2>Edit User</h2>
+      <h3>{user._id}</h3>
       <div>
         <label>First name:</label>
         <br />

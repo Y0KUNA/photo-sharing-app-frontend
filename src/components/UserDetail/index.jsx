@@ -39,7 +39,7 @@ function UserDetail({ User }) {
       <p>
         <b>Occupation:</b> {user.occupation}
       </p>
-      
+
       {User._id === user._id && (
         <Link to={`/edit/${user._id}`}>
           <button>Edit infomation</button>
