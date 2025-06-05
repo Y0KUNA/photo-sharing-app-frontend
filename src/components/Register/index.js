@@ -15,7 +15,7 @@ export default function Register() {
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
-        "https://383889-8080.csb.app/api/user/register",
+        "https://f4gvcl-8080.csb.app/api/user/register",
         {
           method: "POST",
           headers: {

@@ -24,7 +24,7 @@ function UploadPhoto({ User, onUploadSuccess }) {
     setUploading(true);
 
     try {
-      const res = await fetch("https://383889-8080.csb.app/api/photo/upload", {
+      const res = await fetch("https://f4gvcl-8080.csb.app/api/photo/upload", {
         method: "POST",
         body: formData,
         credentials: "include", // Gửi cookie session nếu cần

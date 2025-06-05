@@ -12,7 +12,7 @@ function UserDetail({ User }) {
     async function fetchData() {
       if (!userId) return;
       // Thay :id bằng userId thực tế
-      const url = `https://383889-8080.csb.app/api/user/${userId}`;
+      const url = `https://f4gvcl-8080.csb.app/api/user/${userId}`;
       const result = await fetchModel(url);
       setUser(result);
     }
@@ -39,6 +39,12 @@ function UserDetail({ User }) {
       <p>
         <b>Occupation:</b> {user.occupation}
       </p>
+      
+      {User._id === user._id && (
+        <Link to={`/edit/${user._id}`}>
+          <button>Edit infomation</button>
+        </Link>
+      )}
       <Link to={`/photos/${user._id}`}>View {user.first_name}'s Photos</Link>
     </div>
   );

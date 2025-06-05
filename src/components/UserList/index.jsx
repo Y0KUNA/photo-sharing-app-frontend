@@ -7,7 +7,7 @@ function UserList() {
   useEffect(() => {
     async function fetchData() {
       const result = await fetchModel(
-        "https://383889-8080.csb.app/api/user/list"
+        "https://f4gvcl-8080.csb.app/api/user/list"
       );
       setUsers(result);
     }

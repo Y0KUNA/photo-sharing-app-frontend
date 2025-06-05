@@ -13,12 +13,13 @@ import Photos from "./components/Photos";
 import PhotoDetail from "./components/PhotoDetail";
 import Register from "./components/Register";
 import UploadPhoto from "./components/UploadPhoto.js";
+import UserEdit from "./components/UserEdit/index.js";
 const App = (props) => {
   const [user, setUser] = useState();
   const handleLogout = async () => {
     try {
       const res = await fetch(
-        "https://383889-8080.csb.app/api/user/admin/logout",
+        "https://f4gvcl-8080.csb.app/api/user/admin/logout",
         {
           method: "GET",
           credentials: "include", // để gửi cookie session nếu có
@@ -75,6 +76,7 @@ const App = (props) => {
                 <Route path="/login" element={<Login onLogin={setUser} />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/upload" element={<UploadPhoto User={user} />} />
+                <Route path="/edit/:slug" element={<UserEdit />} />
               </Routes>
             </Paper>
           </Grid>

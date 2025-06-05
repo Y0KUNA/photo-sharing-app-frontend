@@ -14,7 +14,7 @@ function Photos() {
   useEffect(() => {
     async function fetchData() {
       const result = await fetchModel(
-        "https://383889-8080.csb.app/api/photo/list",
+        "https://f4gvcl-8080.csb.app/api/photo/list",
         { credentials: "include" }
       );
       setPhotos(result || []);
@@ -30,7 +30,7 @@ function Photos() {
           {/* Chỉnh lại đường dẫn ảnh nếu cần */}
           <Link to={`/photo/${photo._id}`}>
             <img
-              src={`https://383889-8080.csb.app/api/photo/image/${photo._id}`}
+              src={`https://f4gvcl-8080.csb.app/api/photo/image/${photo._id}`}
               alt={photo.file_name}
               style={{ maxWidth: "100%", height: "auto" }}
             />

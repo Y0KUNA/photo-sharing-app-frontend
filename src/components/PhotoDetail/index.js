@@ -18,7 +18,7 @@ function PhotoDetail({ User }) {
       console.log("Fetching for photoId: ", photoId);
       try {
         const res = await fetch(
-          `https://383889-8080.csb.app/api/photo/${photoId}`
+          `https://f4gvcl-8080.csb.app/api/photo/${photoId}`
         );
 
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
@@ -51,7 +51,7 @@ function PhotoDetail({ User }) {
     }
     setError("");
     try {
-      const res = await fetch("https://383889-8080.csb.app/api/photo/comment", {
+      const res = await fetch("https://f4gvcl-8080.csb.app/api/photo/comment", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -88,7 +88,7 @@ function PhotoDetail({ User }) {
     <div>
       <div>
         <img
-          src={`https://383889-8080.csb.app/api/photo/image/${photo._id}`}
+          src={`https://f4gvcl-8080.csb.app/api/photo/image/${photo._id}`}
           alt={photoId}
           style={{ maxWidth: "100%", height: "auto" }}
         />

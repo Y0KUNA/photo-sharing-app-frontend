@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 async function fetchUser(username) {
   try {
     const res = await fetch(
-      `https://383889-8080.csb.app/api/user/getUser/${username}`
+      `https://f4gvcl-8080.csb.app/api/user/getUser/${username}`
     );
     if (res.ok) {
       const data = await res.json();
@@ -22,7 +22,7 @@ export default function Login({ onLogin }) {
   const handleLogin = async () => {
     try {
       const response = await fetch(
-        "https://383889-8080.csb.app/api/user/admin/login",
+        "https://f4gvcl-8080.csb.app/api/user/admin/login",
         {
           method: "POST",
           headers: {

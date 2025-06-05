@@ -18,7 +18,7 @@ function UserPhotos({ User }) {
       if (!userId) return;
       try {
         const res = await fetch(
-          `https://383889-8080.csb.app/api/user/${userId}`
+          `https://f4gvcl-8080.csb.app/api/user/${userId}`
         );
         if (res.ok) {
           const data = await res.json();
@@ -37,7 +37,7 @@ function UserPhotos({ User }) {
       if (!userId) return;
       try {
         const res = await fetch(
-          `https://383889-8080.csb.app/api/photo/photosOfUser/${userId}`
+          `https://f4gvcl-8080.csb.app/api/photo/photosOfUser/${userId}`
         );
         if (res.ok) {
           const data = await res.json();
@@ -63,7 +63,7 @@ function UserPhotos({ User }) {
           {/* Đường dẫn ảnh nên trỏ đến đúng nguồn, sửa cho phù hợp */}
           <Link to={`/photo/${photo._id}`}>
             <img
-              src={`https://383889-8080.csb.app/api/photo/image/${photo._id}`}
+              src={`https://f4gvcl-8080.csb.app/api/photo/image/${photo._id}`}
               alt={photo.file_name}
               style={{ maxWidth: "100%", height: "auto" }}
             />

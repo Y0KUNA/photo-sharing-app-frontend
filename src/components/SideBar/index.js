@@ -8,7 +8,7 @@ export default function Sidebar({ user, onLogout }) {
   const handleLogout = async () => {
     try {
       const res = await fetch(
-        "https://383889-8080.csb.app/api/user/admin/logout",
+        "https://f4gvcl-8080.csb.app/api/user/admin/logout",
         {
           method: "GET",
           credentials: "include", // để gửi cookie session nếu có
